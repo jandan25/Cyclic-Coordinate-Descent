@@ -1,0 +1,38 @@
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\bin\Debug\RJ_Demo_IK.exe
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\bin\Debug\RJ_Demo_IK.pdb
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\RJ_Demo_IK.csprojResolveAssemblyReference.cache
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\CalcIK_2D_CCD.baml
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\CalcIK_2D_ConstraintRelaxation.baml
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\CalcIK_2D_TwoBoneAnalytic.baml
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\CalcIK_2D_AllTwoBoneAnalytic.baml
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\CalcIK_2D_CCD.g.cs
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\CalcIK_2D_ConstraintRelaxation.g.cs
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\CalcIK_2D_TwoBoneAnalytic.g.cs
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\CalcIK_2D_AllTwoBoneAnalytic.g.cs
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\MainWindow.g.cs
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\App.g.cs
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\RJ_Demo_IK_MarkupCompile.cache
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\RJ_Demo_IK_MarkupCompile.lref
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\MainWindow.baml
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\RJ_Demo_IK.g.resources
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\RJ_Demo_IK.Properties.Resources.resources
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\RJ_Demo_IK.csproj.GenerateResource.Cache
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\RJ_Demo_IK.exe
+C:\Users\Nikita\Downloads\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\RJ_Demo_IK.pdb
+E:\old hard\инст\III курс\6 семестр\Моделирование\курсовой\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\RJ_Demo_IK.exe
+E:\old hard\инст\III курс\6 семестр\Моделирование\курсовой\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\RJ_Demo_IK.pdb
+E:\old hard\инст\III курс\6 семестр\Моделирование\курсовой\RJ_Demo_IK-1.2.0\RJ_Demo_IK\bin\Debug\RJ_Demo_IK.exe
+E:\old hard\инст\III курс\6 семестр\Моделирование\курсовой\RJ_Demo_IK-1.2.0\RJ_Demo_IK\bin\Debug\RJ_Demo_IK.pdb
+E:\old hard\инст\III курс\6 семестр\Моделирование\курсовой\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\RJ_Demo_IK.csprojResolveAssemblyReference.cache
+E:\old hard\инст\III курс\6 семестр\Моделирование\курсовой\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\CalcIK_2D_CCD.baml
+E:\old hard\инст\III курс\6 семестр\Моделирование\курсовой\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\CalcIK_2D_CCD.g.cs
+E:\old hard\инст\III курс\6 семестр\Моделирование\курсовой\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\MainWindow.g.cs
+E:\old hard\инст\III курс\6 семестр\Моделирование\курсовой\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\App.g.cs
+E:\old hard\инст\III курс\6 семестр\Моделирование\курсовой\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\old hard\инст\III курс\6 семестр\Моделирование\курсовой\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\RJ_Demo_IK_MarkupCompile.cache
+E:\old hard\инст\III курс\6 семестр\Моделирование\курсовой\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\RJ_Demo_IK_MarkupCompile.lref
+E:\old hard\инст\III курс\6 семестр\Моделирование\курсовой\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\MainWindow.baml
+E:\old hard\инст\III курс\6 семестр\Моделирование\курсовой\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\RJ_Demo_IK.g.resources
+E:\old hard\инст\III курс\6 семестр\Моделирование\курсовой\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\RJ_Demo_IK.Properties.Resources.resources
+E:\old hard\инст\III курс\6 семестр\Моделирование\курсовой\RJ_Demo_IK-1.2.0\RJ_Demo_IK\obj\Debug\RJ_Demo_IK.csproj.GenerateResource.Cache

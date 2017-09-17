@@ -1,0 +1,135 @@
+﻿<UserControl x:Class="CCD_IK.CalcIK_2D_CCD"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Name="_thisWindow" SizeChanged="_thisWindow_SizeChanged" IsVisibleChanged="_thisWindow_IsVisibleChanged" Width="655">
+
+    <UserControl.Resources>
+        <DataTemplate x:Key="BoneLengthTemplate">
+            <StackPanel>
+                <TextBox Text="{Binding Path=Length, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="BoneAngleTemplate">
+            <StackPanel>
+                <TextBox Text="{Binding Path=Degrees, UpdateSourceTrigger=PropertyChanged, StringFormat=\{0:F3\}}"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="BoneLimitersTemplate">
+            <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75" />
+                        <ColumnDefinition Width="75" />
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Text="{Binding Path=MinLimiterConv, UpdateSourceTrigger=PropertyChanged, StringFormat=\{0:F3\}}"/>
+                    <TextBox Grid.Column="1" Text="{Binding Path=MaxLimiterConv, UpdateSourceTrigger=PropertyChanged, StringFormat=\{0:F3\}}"/>
+
+                </Grid>
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <Grid Name="_mainGrid" Margin="0,0,-129,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="99" />
+            <ColumnDefinition Width="193"/>
+            <ColumnDefinition Name="_viewportColumn"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Grid.ColumnSpan="2">
+            <StackPanel Margin="3">
+                <StackPanel>
+                    <RadioButton Name="_playRadioButton" GroupName="CCD_PlayMode" IsChecked="True" Checked="_playRadioButton_Checked">Моделирование</RadioButton>
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton Name="_pauseRadioButton" VerticalAlignment="Center" GroupName="CCD_PlayMode" Checked="_pauseRadioButton_Checked">Пауза</RadioButton>
+                        <Button Name="_singleUpdateButton" Margin="10 0"  Click="_singleUpdateButton_Click">Пошагово</Button>
+                    </StackPanel>
+                </StackPanel>
+                <!-- Комментарий                 
+				<Label>Iterations per update</Label>
+				<TextBox Height="23" Text="{Binding ElementName=_thisWindow, Path=IterationsPerUpdate, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, StringFormat=\{0:D\} }" />
+				-->
+                <Label>Кости</Label>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Name="_addBoneButton" Grid.Column="0" Click="_addBoneButton_Click">Добавить</Button>
+                    <Button Name="_removeBoneButton" Grid.Column="1" Click="_removeBoneButton_Click">Убрать</Button>
+                </Grid>
+                <ListView
+					Name="_boneList"
+					ItemsSource="{Binding ElementName=_thisWindow, Path=Bones}"
+					ScrollViewer.VerticalScrollBarVisibility="Auto"
+					ScrollViewer.HorizontalScrollBarVisibility="Auto"
+					SelectionMode="Single" MinHeight="100">
+
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListViewItem}">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+
+                    <ListView.View>
+                        <GridView>
+                            <GridView.Columns>
+                                <GridViewColumn Header="Длина" Width="50" CellTemplate="{StaticResource BoneLengthTemplate}"/>
+                                <GridViewColumn Header="Угол" Width="70" CellTemplate="{StaticResource BoneAngleTemplate}"/>
+                                <GridViewColumn Header="Ограничие (мин,макс)" Width="155" CellTemplate="{StaticResource BoneLimitersTemplate}"/>
+                            </GridView.Columns>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+                <Label>Позиция точки</Label>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Height="23" Text="{Binding ElementName=_thisWindow, Path=TargetPosX, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, StringFormat=\{0:F3\} }" />
+                    <TextBox Grid.Column="1" Height="23" Text="{Binding ElementName=_thisWindow, Path=TargetPosY, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, StringFormat=\{0:F3\} }" />
+                </Grid>
+                <Label>Отдаление от цели</Label>
+                <TextBox Grid.Column="0" Height="23" Text="{Binding ElementName=_thisWindow, Path=ArrivalDist, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, StringFormat=\{0:F3\} }" />
+                <Label Grid.Row="1">Результат</Label>
+                <TextBox Height="23" Text="{Binding ElementName=_thisWindow, Path=CCDResult, Mode=OneWay}" IsReadOnly="True" Background="LightGray" />
+            </StackPanel>
+        </ScrollViewer>
+        <Canvas	Grid.Column="2"
+				Background="DarkGray"
+				Name="_viewport"
+				MouseLeftButtonDown="viewport_MouseLeftButtonDown"
+				MouseLeftButtonUp="viewport_MouseLeftButtonUp"
+				MouseMove="viewport_MouseMove" ClipToBounds="True" Margin="0,-9,0,0">
+
+            <Ellipse	Name="_arrivalEllipse"
+						Fill="LightSteelBlue"
+						Canvas.Left="136"
+						Canvas.Top="76"
+						Width="1"
+						Height="1"
+						Panel.ZIndex="4" Opacity="0.75" />
+
+            <Ellipse	Name="_targetEllipse"
+						Stroke="Snow"
+						StrokeThickness="2"
+						Canvas.Left="147.869"
+						Canvas.Top="115.166"
+						Width="8"
+						Height="8"
+						Panel.ZIndex="5" Opacity="0.75" />
+
+            <Line Name="_xAxisLine" X1="0" Y1="80" X2="200" Y2="80" StrokeThickness="1" Stroke="Black" Opacity="0.2" Panel.ZIndex="10"/>
+            <Line Name="_yAxisLine" X1="80" Y1="0" X2="80" Y2="200" StrokeThickness="1" Stroke="Black" Opacity="0.2" Panel.ZIndex="10"/>
+
+            <TextBlock	Panel.ZIndex="1000"
+						ClipToBounds="True"
+						Width="154"
+						Height="20"
+						Canvas.Right="5"
+						Canvas.Top="0" 
+						TextAlignment="Right">
+            </TextBlock>
+        </Canvas>
+    </Grid>
+</UserControl>
